@@ -46,5 +46,14 @@
 			<input type = "submit" name = "boxsubmit" value = "Salvar">
 		</p>
 	</form>
+	
+	<!-- RequestDispatcher to confirmacao.jsp -->
+		<%
+			if(request.getParameter("boxemail") != null){
+				
+			}
+			
+			
+		%>
 </body>
 </html>
