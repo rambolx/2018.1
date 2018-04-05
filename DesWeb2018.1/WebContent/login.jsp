@@ -29,7 +29,7 @@
 		Complemento para endereço: <input type = "text" name = "boxcompaddress"> <br>
 		Municipio: <input type = "text" name = "boxcounty">
 		
-		<!-- Estados -->
+		<!-- States -->
 			<select name = "boxstate">
 				<%
 					String[] estados = {"AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", 
@@ -39,10 +39,12 @@
 					}
 				%>
 		</select> </br>
-		
 		</p>
+		<p>
 		
-	
+		<!-- Submit -->
+			<input type = "submit" name = "boxsubmit" value = "Salvar">
+		</p>
 	</form>
 </body>
 </html>
