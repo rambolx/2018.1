@@ -26,6 +26,20 @@
 				%>
 				</select> <br>
 		Endereço para correspondência: <input type = "text" name = "boxaddress"> <br>
+		Complemento para endereço: <input type = "text" name = "boxcompaddress"> <br>
+		Municipio: <input type = "text" name = "boxcounty">
+		
+		<!-- Estados -->
+			<select name = "boxstate">
+				<%
+					String[] estados = {"AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", 
+					"PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO"};
+					for(String e : estados){
+						out.print(String.format("<option value = '%s'> %s </option>", e, e));
+					}
+				%>
+		</select> </br>
+		
 		</p>
 		
 	
