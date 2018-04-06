@@ -8,7 +8,7 @@
 </head>
 <body>
 	
-	<!-- Login confirmation -->
+	<!-- Show caract of login -->
 	<%
 		out.print("<li> E-mail: " + request.getParameter("boxemail"));
 		out.print("<li> Nome: " + request.getParameter("boxname"));
@@ -16,8 +16,19 @@
 		out.print("<li> Curso: " + request.getParameter("boxcourse"));
 		out.print("<li> Endereço: " + request.getParameter("boxaddress"));
 		out.print("<li> Complemento endereço: " + request.getParameter("boxcompaddress"));
+		out.print("<li> CEP: " + request.getParameter("boxcep"));
 		out.print("<li> Cidade: " + request.getParameter("boxcounty"));
 		out.print("<li> Estado: " + request.getParameter("boxstate"));
 	%>
+	
+	<!-- Confirmation -->
+	<p>
+		Confirma estas informações?
+	</p>
+	<p>
+		<input type = "button" name	= "boxyesconf" value = "Sim">
+		<input type = "button" name	= "boxnoconf" value = "Nao">
+	</p>
+	
 </body>
 </html>

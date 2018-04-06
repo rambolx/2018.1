@@ -3,9 +3,12 @@ package Lab02WEB;
 public class User {
 
 //Attributes;
+	private String email;
 	private String name;
+	private String course;
 	private String address;
 	private String compaddress;
+	private String cep;
 	private String genre;
 	private String county;
 	private String state;
@@ -46,6 +49,24 @@ public class User {
 	}
 	public void setState(String state) {
 		this.state = state;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getCourse() {
+		return course;
+	}
+	public void setCourse(String course) {
+		this.course = course;
+	}
+	public String getCep() {
+		return cep;
+	}
+	public void setCep(String cep) {
+		this.cep = cep;
 	}
 		
 }

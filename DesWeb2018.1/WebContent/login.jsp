@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ page import = "DAO.*, Lab02WEB.*"  %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -27,6 +28,7 @@
 				</select> <br>
 		Endereço para correspondência: <input type = "text" name = "boxaddress"> <br>
 		Complemento para endereço: <input type = "text" name = "boxcompaddress"> <br>
+		CEP: <input type = "text" name = "boxcep"> <br>
 		Municipio: <input type = "text" name = "boxcounty">
 		
 		<!-- States -->
@@ -38,7 +40,7 @@
 						out.print(String.format("<option value = '%s'> %s </option>", e, e));
 					}
 				%>
-		</select> </br>
+		</select> <br>
 		</p>
 		<p>
 		
@@ -50,10 +52,22 @@
 	<!-- RequestDispatcher to confirmacao.jsp -->
 		<%
 			if(request.getParameter("boxemail") != null){
-				
+				/*User u = new User();
+				u.setEmail(request.getParameter("boxemail"));
+				u.setName(request.getParameter("boxname"));
+				u.setGenre(request.getParameter("boxgenre"));
+				u.setCourse(request.getParameter("boxcourse"));
+				u.setAddress(request.getParameter("boxaddress"));
+				u.setCompaddress(request.getParameter("boxcompaddress"));
+				u.setCep(request.getParameter("boxcep"));
+				u.setCounty(request.getParameter("boxcounty"));
+				u.setState(request.getParameter("boxstate"));
+				UserDAO.setUser(u);
+				*/
+				//Request;
+				RequestDispatcher rd = request.getRequestDispatcher("confirmacao.jsp");
+				rd.forward(request, response);
 			}
-			
-			
 		%>
 </body>
 </html>
